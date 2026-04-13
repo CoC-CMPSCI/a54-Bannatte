@@ -37,7 +37,7 @@ int main()
 
 	for (int i = begin; i <= end; ++i) {
 		if (is_prime(i)) {
-			count << i << ", ";
+			cout << i << ", ";
 		}
 		
 	}
