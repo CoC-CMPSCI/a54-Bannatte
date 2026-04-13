@@ -4,7 +4,21 @@
 //		2, 3, 5, 7, ... , 97
 
 #include <iostream>
+#include <cmath>
 using namespace std;
+
+bool is_prime(int num){
+	if (num <= 1) {
+		return false;
+	}
+	
+	for (int j = 2; j <= sqrt(num); ++j) {
+		if (num % j == 0) {
+			return false;
+		}
+	}
+	return true;
+}
 
 int main()
 {
@@ -21,6 +35,13 @@ int main()
 	// TODO: if n is divisible by i, it is not prime
 	// TODO: if n is prime, print it
 
+	for (int i = begin; i <= end; ++i) {
+		if (is_prime(i)) {
+			count << i << ", ";
+		}
+		
+	}
+	
 	cout << endl;
 
 	return 0;
